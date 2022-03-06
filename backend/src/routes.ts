@@ -16,4 +16,6 @@ router.route("/api/lights").get(function(req, res){
     res.send("these are all the lights")
 })
 
+router.route("/api/expenses").get(mainController.expensesController.getAllExpenses)
+
 module.exports = router
