@@ -4,6 +4,7 @@ import {mainController} from "../src/controllers/mainController"
 
 router.route("/api/areas").get(function(req, res){
     res.send("this a response for areas")
+    console.log("areas")
 })
 
 router.route("/api/devices")
@@ -16,6 +17,11 @@ router.route("/api/lights").get(function(req, res){
     res.send("these are all the lights")
 })
 
-router.route("/api/expenses").get(mainController.expensesController.getAllExpenses)
+router.route("/api/expenses")
+.get(mainController.expensesController.getAllExpenses)
+.post(mainController.expensesController.createExpense)
+
+router.route("/api/expenses/:id")
+.delete(mainController.expensesController.deleteExpense)
 
 module.exports = router
