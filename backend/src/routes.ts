@@ -23,5 +23,6 @@ router.route("/api/expenses")
 
 router.route("/api/expenses/:id")
 .delete(mainController.expensesController.deleteExpense)
+.get(mainController.expensesController.getOneExpense)
 
 module.exports = router

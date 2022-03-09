@@ -16,6 +16,11 @@ const dataSchema = mongoose.Schema({
         required: true,
         
     },
+    class: {
+        type: String,
+        required: true,
+    },
+
     order: {
         type: String,
         required: true,
@@ -43,7 +48,7 @@ const dataSchema = mongoose.Schema({
     },
     isHouseExpense:{
         type:Boolean,
-        required: true
+        required: false
     }
 })
 
